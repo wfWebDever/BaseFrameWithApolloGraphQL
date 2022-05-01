@@ -1,0 +1,8 @@
+/node_modules/
+/src/App.test.tsx
+/public
+/dist
+/build
+/config
+/scripts
+/craco.config.js
