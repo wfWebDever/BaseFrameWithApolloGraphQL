@@ -1,0 +1,5 @@
+query Cores($limit: Int, $offset: Int) {
+  cores(limit: $limit, offset: $offset) {
+    id
+  }
+}

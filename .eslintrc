@@ -3,6 +3,9 @@
     "browser": true,
     "es2021": true
   },
+  "settings": {
+    "import/extensions": [".js", ".jsx"]
+  },
   "extends": ["plugin:react/recommended", "airbnb", "prettier"],
   "parserOptions": {
     "ecmaFeatures": {
@@ -14,17 +17,26 @@
   "plugins": ["react", "prettier"],
   "rules": {
     "prettier/prettier": 2,
-    "react/jsx-filename-extension": [2, { "extensions": [".jsx"] }],
-    "no-unused-vars": 1,
-    "no-shadow": [
-      1,
+    "import/no-extraneous-dependencies": [2, {"devDependencies": true}],
+    "react/jsx-filename-extension": [2, { "extensions": [".jsx",".js"] }],
+    "import/extensions": [
+      2,
+      "ignorePackages",
       {
-        "builtinGlobals": false,
-        "hoist": "functions",
-        "allow": [],
-        "ignoreOnInitialization": false
+        "js": "never",
+        "jsx": "never"
+
       }
     ],
-    "default-param-last": 2
+    "no-unused-vars": 1,
+    "no-shadow": 0,
+    "no-console": 1,
+    "react/function-component-definition": [
+      2,
+      { "namedComponents": "arrow-function" }
+    ],
+    "react/react-in-jsx-scope": 0,
+    "import/no-unresolved": [2, { "ignore": ["^swiper"] }],
+    "import/prefer-default-export": 0
   }
 }

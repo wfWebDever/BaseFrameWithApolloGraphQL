@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useQuery, gql } from '@apollo/client'
 import { Table } from 'antd'
+import { CORES } from '../graphql/querys'
+// import CORES from '../graphql/cores.graphql'
 
 // const EXCHANGE_RATES = gql`
 //   query GetExchangeRates($currency: String!) {
@@ -10,13 +12,6 @@ import { Table } from 'antd'
 //     }
 //   }
 // `
-const CORES = gql`
-  query Cores($limit: Int, $offset: Int) {
-    cores(limit: $limit, offset: $offset) {
-      id
-    }
-  }
-`
 
 const columns = [
   {
@@ -26,7 +21,8 @@ const columns = [
     width: 400
   }
 ]
-function PageDemo() {
+
+const PageDemo = () => {
   const [page, setPage] = useState({
     page: 1,
     pageSize: 10,
