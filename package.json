@@ -20,7 +20,16 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "prepare":"husky install",
     "lint": "eslint --ext .jsx,.js,.ts,.tsx src/ --fix "
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "yarn lint"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +61,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
     "prettier": "^2.6.2",
     "vite": "^4.0.4"
   },
