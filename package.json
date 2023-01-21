@@ -20,13 +20,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "prepare":"husky install",
+    "prepare": "husky install",
     "lint": "eslint --ext .jsx,.js,.ts,.tsx src/ --fix "
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint"
-    }
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "yarn lint"
