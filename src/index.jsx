@@ -7,7 +7,7 @@ import App from './App'
 
 // Apollo config
 const client = new ApolloClient({
-  uri: 'https://api.spacex.land/graphql',
+  uri: 'https://api.spacex.land/graphql', // maybe use .env
   cache: new InMemoryCache({
     typePolicies: {
       Query: {

@@ -1,8 +1,10 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 const Home = () => (
   <div>
-    <a href="/pageDemo">Pagination Catch Demo</a>
+    <a href="/page">Pagination Catch Demo</a>
+    <Outlet />
   </div>
 )
 
