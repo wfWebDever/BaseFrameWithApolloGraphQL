@@ -28,7 +28,7 @@
 
       }
     ],
-    "no-unused-vars": 1,
+    "no-unused-vars": 2,
     "no-shadow": 0,
     "no-console": 1,
     "react/function-component-definition": [
