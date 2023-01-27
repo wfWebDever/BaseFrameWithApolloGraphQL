@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
-import { useQuery, gql } from '@apollo/client'
+import {
+  useQuery
+  // gql
+} from '@apollo/client'
 import { Table } from 'antd'
 import { CORES } from '../graphql/querys'
 // import CORES from '../graphql/cores.graphql'
