@@ -10,7 +10,6 @@ import {
   from
 } from '@apollo/client'
 import { onError } from '@apollo/client/link/error'
-
 import './index.css'
 import App from './App'
 
